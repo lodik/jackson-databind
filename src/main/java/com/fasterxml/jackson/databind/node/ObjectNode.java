@@ -362,7 +362,7 @@ public class ObjectNode
      *
      * @since 2.1
      */
-    public JsonNode set(String fieldName, JsonNode value)
+    public ObjectNode set(String fieldName, JsonNode value)
     {
         if (value == null) {
             value = nullNode();
@@ -381,7 +381,7 @@ public class ObjectNode
      *
      * @since 2.1
      */
-    public JsonNode setAll(Map<String,? extends JsonNode> properties)
+    public ObjectNode setAll(Map<String,? extends JsonNode> properties)
     {
         for (Map.Entry<String,? extends JsonNode> en : properties.entrySet()) {
             JsonNode n = en.getValue();
@@ -403,7 +403,7 @@ public class ObjectNode
      *
      * @since 2.1
      */
-    public JsonNode setAll(ObjectNode other)
+    public ObjectNode setAll(ObjectNode other)
     {
         _children.putAll(other._children);
         return this;
@@ -437,7 +437,7 @@ public class ObjectNode
      * 
      * @since 2.1
      */
-    public JsonNode without(String fieldName)
+    public ObjectNode without(String fieldName)
     {
         _children.remove(fieldName);
         return this;
